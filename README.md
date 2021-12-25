@@ -1,1 +1,1 @@
-# gulp-b
+# gulp-boilerplate
