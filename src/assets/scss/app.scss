@@ -1,4 +1,34 @@
+$primarycolor: #dc780b;
 html {
-     background:red;
-     font-size: 44px;
+  color: $primarycolor;
 }
+
+.item {
+   p {}
+   a {}
+}
+
+.item {
+   color: red;
+   &__img {
+      width: 100px;
+      height: 100px;
+   }
+   &__title {
+      font-size: 33px;
+      font-weight: normal;
+   }
+}
+
+@mixin theme() {
+   background: #000;
+   color: black;
+}
+
+.title {
+   @include theme;
+   margin-top: 20px;
+}
+
+@import "./componets/header"
+

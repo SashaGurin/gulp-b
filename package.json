@@ -1,5 +1,5 @@
 {
-  "name": "gulp-boilerplate",
+  "name": "gulp-bollerplate",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
@@ -8,24 +8,24 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SashaGurin/gulp-boilerplate.git"
+    "url": "git+https://github.com/VladBorisenko/gulp-bollerplate.git"
   },
-  "author": "",
+  "author": "Vlad Borisenko",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/SashaGurin/gulp-boilerplate/issues"
+    "url": "https://github.com/VladBorisenko/gulp-bollerplate/issues"
   },
-  "homepage": "https://github.com/SashaGurin/gulp-boilerplate#readme",
+  "homepage": "https://github.com/VladBorisenko/gulp-bollerplate#readme",
   "devDependencies": {
     "browser-sync": "^2.27.7",
+    "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
+    "gulp-imagemin": "^8.0.0",
     "gulp-plumber": "^1.2.1",
     "gulp-pug": "^5.0.0",
+    "gulp-sass": "^5.0.0",
     "sass": "^1.45.1"
-  },
-  "dependencies": {
-    "gulp-sass": "^5.0.0"
   }
 }

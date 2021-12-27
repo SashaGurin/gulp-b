@@ -1,24 +1,21 @@
-// const { watch } = require('browser-sync');
 const gulp = require('gulp'),
-      browserSync = require('browser-sync');
+    browserSync = require('browser-sync'),
+    autoPrefixer = require('gulp-autoprefixer'),
+    sass = require('gulp-sass')(require('sass')),
+    autoprefixer = require('gulp-autoprefixer'),
+    cleanCSS = require('gulp-clean-css'),
+    pug = require('gulp-pug'),
+    plumber = require('gulp-plumber')
 
-// функция обновления страницы  при изменнениях в файлах билда
+
 function browsersync() {
-    browserSync.init ({
-        server: {
-            basedir: 'bulid'
-        }
-    })
+        browserSync.init({
+            server: {
+                baseDir: 'build'
+            }
+        })
 }
 
-// функция копирования изображеня
-function images() {
-    return gulp.src ('src/assets/imgs/**/*')
-      .pipe(gulp.dest('build/assets/imgs'))
-      .pipe(browserSync.stream())
-}
-
-// функция преобразования pug в html
 function html() {
     return gulp.src('src/pug/*.pug')
         .pipe(plumber())
@@ -30,36 +27,36 @@ function html() {
         .on('end', browserSync.reload)
 }
 
-// require - функция node.js для загрузки модулей
-const sass = require('gulp-sass')(require('sass')),
-      autoprefixer = require('gulp-autoprefixer'),
-      pug = require ('gulp-pug'),
-      plumber = require ('gulp-plumber'),
-      cleanCSS = require('gulp-clean-css');
-
-// фунция преобразовани SCSS  в css
-function scss(){
+function css() {
     return gulp.src('src/assets/scss/app.scss')
-    .pipe(sass().on('error', sass.logError))
-    .pipe(autoprefixer({
-        overrideBrowserslist: ['last 2 versions'],
-        grid: 'autoplace',
-    }))
-    .pipe(cleanCSS())
-    .pipe(gulp.dest('build/assets/css'))
-    .pipe(browserSync.stream())
+        .pipe(sass().on('error', sass.logError))
+        .pipe(autoprefixer({
+            overrideBrowserslist: ['last 2 versions'],
+            grid: 'autoplace',
+        }))
+        .pipe(cleanCSS())
+        .pipe(gulp.dest('build/assets/css'))
+        .pipe(browserSync.stream())
+    }
+
+function images() {
+    return gulp.src('src/assets/imgs/**/*')
+        .pipe(gulp.dest('build/assets/imgs'))
+        .pipe(browserSync.stream())
 }
 
-
-// функция отслеживания изменений в файлах исходников
 function watcher() {
-    gulp.watch('src/pug/**/*.pug', html)
-    gulp.watch('src/assets/scss/**/*', scss)
     gulp.watch('src/assets/imgs/**/*', images)
+    gulp.watch('src/assets/scss/**/*', css)
+    gulp.watch('src/pug/**/*', html)
 }
 
-// команда запуска по умолчанию(gulp)
 gulp.task(
     'default',
-    gulp.parallel(browsersync, watcher, images, scss, html)
-)
+    gulp.parallel(browsersync, watcher, css, html, images)
+);
+
+
+
+
+    
