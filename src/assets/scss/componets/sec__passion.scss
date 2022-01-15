@@ -1,0 +1,85 @@
+.passion {
+  margin-top: 69px;
+  margin-bottom: 160px;
+  @media (max-width:788px) {
+    margin-bottom: 80px;
+    margin-top: 49px;
+   }
+  .benefits {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 19px;
+    margin: 0 20px;
+    @media (max-width:788px) {
+      display: block;
+      padding-top: 0px;
+     }
+    &__item {
+      margin: 0 10px;
+      text-align: center;
+      @media (max-width:788px) {
+        margin-top: 30px;
+       }
+      .benefits__img-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 88px;
+        height: 88px;
+        margin: 0 auto;
+        margin-bottom: 33px;
+        border-radius: 50%;
+        background: rgba(143, 166, 50, 0.1);
+        @media (max-width:788px) {
+          margin-bottom: 15px;
+         }
+
+      }
+      .benefits__img-box.moto {
+        background: rgba(230, 77, 46, 0.1);
+      }
+      .benefits__img-box.sun {
+        background: rgba(220, 120, 11, 0.1);
+      }
+      .benefits__text {
+        line-height: 24px;
+        opacity: 0.7;
+        max-width: 300px;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+.benefits__title.middle-title,
+.middle-title {
+  font-family: $secondary-font;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 24px;
+  color: $primerycolor-black;
+  margin-bottom: 15px;
+}
+.title__box {
+  text-align: center;
+  .span__bg {
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: $primerycolor-orange;
+    opacity: 0.7;
+  }
+  .title__bg {
+    font-family: $secondary-font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 31.25px;
+    line-height: 35px;
+    color: $primerycolor-black;
+    margin: 7px 0 25px;
+  }
+  .title__bg:nth-child(2) {
+    margin-top: 9px;
+  }
+}

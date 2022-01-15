@@ -1,0 +1,17 @@
+@import "../main/vars";
+
+.description__btn-right {
+  padding: 21px 40px;
+  background: $primerycolor-white;
+  border-radius: 5px;
+  color: $primerycolor-orange;
+  cursor: pointer;
+  transition:all 0.3s;
+  &:hover {
+    border: 1.5px solid rgba(220, 120, 11, 1);
+  }
+  @media (max-width:430px) {
+    padding: 12px 25px;
+    font-size: 14px;
+  }
+}

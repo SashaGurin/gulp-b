@@ -1,4 +1,25 @@
 header.header
-     menu
-       a(href="./index.html") главная
-       a(href="./about.html") о нас
+  .container
+    .header__iner
+      .header__iner-left
+        .header__logo.logo
+          a.logo-link(href="#")
+            img.logo-img(src="assets/imgs/logo.png", alt="картинка")
+        button.burger(type="button")
+          span.burger-item
+        .haeder__menu.menu
+          ul.menu-list
+            li.menu-item
+              a.menu-link(href="#") Homefer
+            li.menu-item
+              a.menu-link(href="#") About us
+            li.menu-item
+              a.menu-link(href="#") Menu
+            li.menu-item
+              a.menu-link(href="#") Features
+            li.menu-item
+              a.menu-link(href="#") Contact us
+      .header__iner-right
+        a.header__btn.btn Booking Now
+
+

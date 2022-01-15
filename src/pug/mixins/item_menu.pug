@@ -1,0 +1,21 @@
+mixin item_menu(img,title,subtitle,text,count)
+  .menupos__item.item
+    .menupos__img-box
+      img(src=img, alt="картинка")
+    .menupos__info
+      .menupos__title-box
+        h3.middle-title.menupos-title=title
+        span.middle-title.menupos-span=subtitle
+      p.menupos__text=text
+      .rating__box
+        .reting__box-add
+          .add-line
+          .add-column
+        .reting__box-stars
+          .rating(data-rating=count)
+            .rating__star
+            .rating__star
+            .rating__star
+            .rating__star
+            .rating__star
+

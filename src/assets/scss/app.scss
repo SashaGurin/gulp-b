@@ -1,34 +1,32 @@
-$primarycolor: #dc780b;
-html {
-  color: $primarycolor;
-}
 
-.item {
-   p {}
-   a {}
-}
+// @mixin theme() {
+//    background: #000;
+//    color: black;
+// }
 
-.item {
-   color: red;
-   &__img {
-      width: 100px;
-      height: 100px;
-   }
-   &__title {
-      font-size: 33px;
-      font-weight: normal;
-   }
-}
+// .title {
+//    @include theme;
+//    margin-top: 20px;
+// }
 
-@mixin theme() {
-   background: #000;
-   color: black;
-}
+// основные стили
+@import "./main/reset.scss";
+@import "./main/vars.scss";
+@import "./main/main.scss";
 
-.title {
-   @include theme;
-   margin-top: 20px;
-}
 
-@import "./componets/header"
 
+// стили компонентов
+// header...........
+@import "./componets/header";
+
+// MAIN.........
+//- Section description..........
+@import "./componets/sec__description.scss";
+//- Section passion..........
+@import "./componets/sec__passion.scss";
+// Section menupos
+@import "./componets/sec__menupos.scss";
+
+// footer...........
+@import "./componets/footer"

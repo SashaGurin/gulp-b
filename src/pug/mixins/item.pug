@@ -1,8 +1,7 @@
-mixin item(img,title)
-   div.item
-         .item-img
-            img(src=img)
-            h6.item_title!=title
-            ul
-               li пунк 1
-               li пункт 2
+mixin item(img,title,text)
+  .benefits__item
+    .benefits__img-box(class!=attributes.class)
+        img.benefits-img(src=img)
+    h3.benefits__title.middle-title=title
+    p.benefits__text=text
+
